@@ -40,8 +40,7 @@ router.post("/user/sign_up", async (req, res) => {
         salt,
         hash,
         account: {
-          username: body.username,
-          phone: body.phone
+          username: body.username
         }
       });
 
