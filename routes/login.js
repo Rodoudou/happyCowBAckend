@@ -25,7 +25,7 @@ router.post("/user/log_in", async (req, res) => {
       if (SHA256(body.password + user.salt).toString(encBase64) === user.hash) {
         return res.json({
           _id: user._id,
-          email,
+         email: user.email,
           token: user.token,
           account: {
             username: user.account.username
